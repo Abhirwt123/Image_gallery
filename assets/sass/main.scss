@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+header {
+  max-width: 140rem;
+  margin: 0 auto;
+  .banner {
+    background-image: url(../images/gaming-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .banner-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      .title {
+        font-size: 5rem;
+        color: white;
+      }
+      .sub-title {
+        font-size: 3rem;
+        color: white;
+        text-align: center;
+      }
+      .search-box {
+        width: 60%;
+        position: relative;
+        #search-image {
+          width: 100%;
+          border: transparent;
+          outline: transparent;
+          padding: 0.8rem 1.2rem;
+          padding-left: 4rem;
+          border-radius: 0.6rem;
+          font-size: 1.6rem;
+          color: #000439;
+        }
+        .search-icon {
+          position: absolute;
+          top: 0.8rem;
+          left: 1rem;
+          i {
+            color: black;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// gallery section start
+
+.gallery {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  .gallery-card {
+    .gallery-wrap {
+      gap: 1.5rem;
+      columns: 5 34rem;
+      .image-item {
+        position: relative;
+        list-style: none;
+        margin-bottom: 1.6rem;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+        .image-detail {
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1.4rem;
+          width: 100%;
+          padding:  1rem;
+          bottom: -100%;
+          color:white;
+          transition: .2s ease-in;
+          background: linear-gradient(to top , rgba(0,0,0,0.7),transparent
+          );
+          .download-icon{
+            button{
+              padding: 0.4rem;
+              border-radius: 0.5rem;
+              border: transparent;
+              outline: transparent
+            }
+          }
+          .photographer{
+            i{
+              font-size: 1.8rem;
+            }
+          }
+        }
+        &:hover .image-detail{
+            bottom: .5rem;
+        }
+      }
+    }
+  }
+  .button-box {
+    width: 14rem;
+    margin: 0 auto;
+    #load {
+      width: 100%;
+      padding: 0.8rem 1.2rem;
+      background-color: #000439;
+      color: white;
+      font-size: 1.6rem;
+      border-radius: 0.6rem;
+      outline: transparent;
+      border: transparent;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .disable{
+      opacity: .5;
+      pointer-events: none;
+    }
+  }
+}
+
+// media queris
+
+@media only screen and (max-width: 789px) {
+  html{
+    font-size: 45%;
+  }
+  header{
+    .banner-card{
+      .title-box{
+        .title{
+          font-size: 4rem;
+          text-align: center;
+
+        }
+        .sub-title{
+            font-size: 2rem;
+            text-align: center;
+        }
+      }
+    }
+  }
+}
